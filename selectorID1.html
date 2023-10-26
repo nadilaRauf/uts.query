@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="myParagraph">Ini Adalah Sebuah Paragraf.</p>
+
+    <button id="changeTextButton">Ubah Teks</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#changeTextButton").click(function(){
+                $("#myParagraph").text("Teks Telah Diubah!");
+            });
+        });
+    </script>
+</body>
+</html>

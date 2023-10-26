@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+  
+        .form-group {
+          margin-bottom: 15px;
+        }
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+  
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+  
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          background-color: #3498db;
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+        }
+  
+        button:hover {
+          background-color: #2980b9;
+        }
+  
+        #output {
+          margin-top: 20px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+      </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="form-group">
+            <label for="nameInput">Nama : </label>
+            <input type="text" id="nameInput" name="name" />
+        </div>
+
+        <div class="form-group">
+            <label for="emailInput">Email : </label>
+            <input type="email" id="emailInput" name=""email />
+        </div>
+
+        <div class="form-group">
+            <label for="passwordInput">Kata Sandi:</label>
+            <input type="password" id="passwordInput" name="password" />
+        </div>
+
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        $(document).ready(function (){
+            $("#myForm").submit(function(event){
+                event.preventDefault();
+
+                const name = $("#nameInput").val();
+                const email = $("#emailInput").val();
+                const password = $("#passwordInput").val();
+
+                $("#output").html('<strong>Hasil:</strong><br> Nama : ${name}<br>Email : ${email}<br>Kata Sandi : ${password}');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Kata Sandi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>********</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>jane@example.com</td>
+            <td>********</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <button id="highlightButton">Highlight Baris Pertama</button>
+      <button id="addRowButton">Tambah Baris</button>
+
+      <script>
+        $(document).ready(function () {
+          $("#highlightButton").click(function () {
+            $("#myTable tbody tr:first").css("background-color", "yellow");
+          });
+  
+          $("#addRowButton").click(function () {
+            // Mendapatkan jumlah kolom dalam tabel
+            const columnCount = $("#myTable thead th").length;
+  
+            // Menambahkan baris baru dengan data dummy
+            const newRow = "<tr><td>New Name</td><td>New Email</td><td>New Password</td></tr>";
+            $("#myTable tbody").append(newRow);
+          });
+        });
+      </script>
+</body>
+</html>

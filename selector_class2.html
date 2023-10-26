@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+</head>
+<style>
+    .borderClass {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 5px;
+    }
+    .borderAdded {
+        border: 2px solid greenyellow;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+    <div class="borderClass">Elemen 1</div>
+    <div class="borderClass">Elemen 2</div>
+    <div class="borderClass">Elemen 3</div>
+
+    <button id="addBorderButton">Tambah Border</button>
+    <button id="removeBorderButton">Hapus Border</button>
+
+    <script>
+        $(document).ready(function (){
+            $("#addBorderButton").click(function(){
+                $(".borderClass").addClass("borderAdded");
+            });
+        });
+
+        $("#removeBorderButton").click(function(){
+            $(".borderClass").removeClass("borderAdded");
+        });
+    </script>
+</body>
+</html>

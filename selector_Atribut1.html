@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 1</title>
+    <style>
+        .highlight {
+          background-color: yellow;
+        }
+      </style>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</head>
+<body>
+    <button id="highlightButton" data-color="blue">Highlight</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#highlightButton").click(function () {
+          const color = $(this).data("color");
+          $(this).css("background-color", color);
+        });
+      });
+    </script>
+</body>
+</html>
