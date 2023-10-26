@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+    <input type="text" placeholder="Nama" id="nameInput" />
+    <input type="email" placeholder="Email" id="emailInput"/>
+    <input type="password" placeholder="Kata Sandi" id="passwordInput" />
+
+    <button id="selectButton">Pilih Input Email</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#selectButton").click(function () {
+                const emailInput = $("input[type='email']");emailInput.css("border", "2px solid red");
+
+                $("#passwordInput").after('<button id="newButton">Tambah Tombol</button>');
+                $("#newButton").click(function () {
+                    $(this).css("background-color", "green");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
